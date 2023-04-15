@@ -1,10 +1,9 @@
 import { GET_ALL_DOGS, GET_DOG_DETAILS, GET_TEMPERAMENTS, CLEAN_DOG_DETAILS, SET_SELECTED_TEMPERAMENTS, SET_SELECTED_MODE, UPDATE_SELECTED_ID_TYPE, GET_DB_BREEDS } from "./action-types";
 import axios from "axios";
-const { URLAPI } = process.env;
 
 export const getAllDogs = () => {
     return function(dispatch) {
-        fetch(`${URLAPI}/dogs`)
+        fetch(`https://doggo-api-api.vercel.app/dogs`)
         .then(result => result.json())
         .then(data => {
             console.log(data)
@@ -15,7 +14,7 @@ export const getAllDogs = () => {
 
 export const getDogDetails = (id) => {
     return function(dispatch) {
-        fetch(`${URLAPI}/dogs/${id}`)
+        fetch(`https://doggo-api-api.vercel.app/dogs/${id}`)
         .then(result => result.json())
         .then(dog => {
             return dispatch({type: GET_DOG_DETAILS, payload: dog})
@@ -25,7 +24,7 @@ export const getDogDetails = (id) => {
 
 export const getDBBreeds = () => {
     return function(dispatch) {
-        fetch(`${URLAPI}/dogsDB`)
+        fetch(`https://doggo-api-api.vercel.app/dogsDB`)
         .then(result => result.json())
         .then(breeds => {
             return dispatch({type: GET_DB_BREEDS, payload: breeds})
@@ -35,7 +34,7 @@ export const getDBBreeds = () => {
 
 export const getTemperaments = () => {
     return function(dispatch) {
-        fetch(`${URLAPI}/temperaments`)
+        fetch(`https://doggo-api-api.vercel.app/temperaments`)
         .then(result => result.json())
         .then(data => {
             return dispatch({type: GET_TEMPERAMENTS, payload: data})
@@ -45,7 +44,7 @@ export const getTemperaments = () => {
 
 export const deleteBreed = async(id) => {
     try {
-        const response = await axios.delete(`${URLAPI}/deleteDogs/${id}`)
+        const response = await axios.delete(`https://doggo-api-api.vercel.app/deleteDogs/${id}`)
         return(response)
     } catch (error) {
         
@@ -63,7 +62,7 @@ export const postBreed = async(dog) => {
         img: dog.img
     } 
     try {
-        const response = await axios.post("http://localhost:3001/dogs", data);
+        const response = await axios.post("https://doggo-api-api.vercel.app/dogs", data);
         return(response)
     } catch (error) {
         return (error);
