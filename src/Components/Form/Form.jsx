@@ -227,11 +227,7 @@ export default function Form() {
           postBreed(breed)
             .then((response) => {
               if (response instanceof axios.AxiosError) {
-                if (response.code === "ERR_NETWORK" || "ERR_BAD_REQUEST") {
-                  setStatusColor("red")
-                  setStatus("Servers are not available, try again later")
-                }
-                if (response.response.data.error === "llave duplicada viola restricción de unicidad «Dogs_name_key»") {
+                if (response.response.data.error.name === "SequelizeUniqueConstraintError") {
                   setStatusColor("red")
                   setStatus(`There is already a breed called "${breed.name}" in the DB`)
                 }
