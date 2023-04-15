@@ -7,6 +7,7 @@ export const getAllDogs = () => {
         fetch(`${URLAPI}/dogs`)
         .then(result => result.json())
         .then(data => {
+            console.log(data)
             return dispatch({type: GET_ALL_DOGS, payload: data});
         })
     }
