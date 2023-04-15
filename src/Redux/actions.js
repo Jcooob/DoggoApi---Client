@@ -1,9 +1,10 @@
 import { GET_ALL_DOGS, GET_DOG_DETAILS, GET_TEMPERAMENTS, CLEAN_DOG_DETAILS, SET_SELECTED_TEMPERAMENTS, SET_SELECTED_MODE, UPDATE_SELECTED_ID_TYPE, GET_DB_BREEDS } from "./action-types";
 import axios from "axios";
+const { URLAPI } = process.env;
 
 export const getAllDogs = () => {
     return function(dispatch) {
-        fetch("http://localhost:3001/dogs")
+        fetch(`${URLAPI}/dogs`)
         .then(result => result.json())
         .then(data => {
             return dispatch({type: GET_ALL_DOGS, payload: data});
@@ -13,7 +14,7 @@ export const getAllDogs = () => {
 
 export const getDogDetails = (id) => {
     return function(dispatch) {
-        fetch(`http://localhost:3001/dogs/${id}`)
+        fetch(`${URLAPI}/dogs/${id}`)
         .then(result => result.json())
         .then(dog => {
             return dispatch({type: GET_DOG_DETAILS, payload: dog})
@@ -23,7 +24,7 @@ export const getDogDetails = (id) => {
 
 export const getDBBreeds = () => {
     return function(dispatch) {
-        fetch("http://localhost:3001/dogsDB")
+        fetch(`${URLAPI}/dogsDB`)
         .then(result => result.json())
         .then(breeds => {
             return dispatch({type: GET_DB_BREEDS, payload: breeds})
@@ -33,7 +34,7 @@ export const getDBBreeds = () => {
 
 export const getTemperaments = () => {
     return function(dispatch) {
-        fetch("http://localhost:3001/temperaments")
+        fetch(`${URLAPI}/temperaments`)
         .then(result => result.json())
         .then(data => {
             return dispatch({type: GET_TEMPERAMENTS, payload: data})
@@ -43,7 +44,7 @@ export const getTemperaments = () => {
 
 export const deleteBreed = async(id) => {
     try {
-        const response = await axios.delete(`http://localhost:3001/deleteDogs/${id}`)
+        const response = await axios.delete(`${URLAPI}/deleteDogs/${id}`)
         return(response)
     } catch (error) {
         
