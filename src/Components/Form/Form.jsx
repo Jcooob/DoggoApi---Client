@@ -226,8 +226,9 @@ export default function Form() {
         if (validate()) {
           postBreed(breed)
             .then((response) => {
+              console.log(response)
               if (response instanceof axios.AxiosError) {
-                if (response.code === "ERR_NETWORK") {
+                if (response.code === "ERR_NETWORK" || "ERR_BAD_REQUEST") {
                   setStatusColor("red")
                   setStatus("Servers are not available, try again later")
                 }
