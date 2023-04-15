@@ -226,7 +226,6 @@ export default function Form() {
         if (validate()) {
           postBreed(breed)
             .then((response) => {
-              console.log(response)
               if (response instanceof axios.AxiosError) {
                 if (response.code === "ERR_NETWORK" || "ERR_BAD_REQUEST") {
                   setStatusColor("red")
@@ -237,7 +236,7 @@ export default function Form() {
                   setStatus(`There is already a breed called "${breed.name}" in the DB`)
                 }
               } else {
-                if (response.statusText === "OK" && response.status === 200) {
+                if (response.status === 200) {
                   setStatusColor("green")
                   setStatus("Breed created successfully!")
                   clearForm();

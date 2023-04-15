@@ -6,7 +6,6 @@ export const getAllDogs = () => {
         fetch(`https://doggo-api-api.vercel.app/dogs`)
         .then(result => result.json())
         .then(data => {
-            console.log(data)
             return dispatch({type: GET_ALL_DOGS, payload: data});
         })
     }
@@ -63,7 +62,6 @@ export const postBreed = async(dog) => {
     } 
     try {
         const response = await axios.post("https://doggo-api-api.vercel.app/dogs", data);
-        console.log(response)
         return(response)
     } catch (error) {
         return (error);
