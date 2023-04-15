@@ -227,7 +227,7 @@ export default function Form() {
           postBreed(breed)
             .then((response) => {
               console.log(response)
-              if (response.name = "AxiosError") {
+              if (response.name && response.name === "AxiosError") {
                 if (response.response.data.error.name === "SequelizeUniqueConstraintError") {
                   setStatusColor("red")
                   setStatus(`There is already a breed called "${breed.name}" in the DB`)
