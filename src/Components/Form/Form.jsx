@@ -226,6 +226,7 @@ export default function Form() {
         if (validate()) {
           postBreed(breed)
             .then((response) => {
+              console.log(response)
               if (response.name = "AxiosError") {
                 if (response.response.data.error.name === "SequelizeUniqueConstraintError") {
                   setStatusColor("red")
