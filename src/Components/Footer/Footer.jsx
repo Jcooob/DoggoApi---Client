@@ -14,7 +14,7 @@ const Footer = () => {
                         <p className="developer">Designed and developed by Rejcob</p>
                         <div className="social-icons">
                             <a href="https://github.com/Jcooob"><img src={github} alt="githubLogo" className="socialMediaIcon" /></a>
-                            <a href="https://www.linkedin.com/in/jacobo-renato-cohello-revolledo-096102251"><img src={linkedin} alt="linkedin" className="socialMediaIcon" /></a>
+                            <a href="https://www.linkedin.com/in/jacobo-cohello-revolledo-096102251/"><img src={linkedin} alt="linkedin" className="socialMediaIcon" /></a>
                         </div>
                     </div>
 
