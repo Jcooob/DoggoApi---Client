@@ -1,0 +1,160 @@
+.NavBar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #181818;
+	padding-block: 1rem;
+	font-family: Arial, sans-serif;
+	height: 5rem;
+}
+
+.logoNavBar {
+	background-color: #ddbd83;
+	border-radius: 10px;
+	padding: 2.3rem;
+	height: 3.2rem;
+	margin-right: 3rem;
+}
+
+.selected-temperaments {
+	display: flex;
+	align-items: center;
+	width: 30rem;
+	background-color: rgb(56, 56, 56);
+	padding-inline: 0.5rem;
+	padding-block: 0.8rem;
+	border-radius: 5px;
+	border: none;
+	height: 2rem;
+	margin-right: 1rem;
+}
+
+.selected-temperaments-label {
+	width: 12rem;
+	margin-right: 1rem;
+	font-weight: 700;
+	border: none;
+	font-size: 0.55rem;
+	color: white
+}
+
+.temperaments-select {
+	height: 2.3rem;
+	background-color: #525252;
+	color: aliceblue;
+	font-size: 0.55rem;
+	width: 15rem;
+	margin-right: 1rem;
+}
+
+.temperaments-label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 0.57rem;
+	margin-right: 1rem;
+	background-color: #c9c9c9;
+	max-width: 7rem;
+	min-width: 7rem;
+	width: 7rem;
+	height: 2.5rem;
+	border-radius: 4px;
+	transition: all 0.2s ease-in-out;
+}
+
+.temperaments-label-empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 0.6rem;
+	margin-right: 1rem;
+	background-color: #c9c9c9;
+	max-width: 7rem;
+	min-width: 7rem;
+	width: 7rem;
+	height: 2.5rem;
+	border-radius: 4px;
+	transition: all 0.2s ease-in-out;
+}
+
+.filterMode {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: #525252;
+	height: 2.5rem;
+	border-radius: 4px;
+	margin-right: 1rem;
+}
+
+.and-label, .or-label {
+	margin-inline: 0.4rem;
+	color: rgb(255, 255, 255);
+	width: 1.5rem;
+	font-size: 0.5rem;
+}
+
+.clearButton {
+	padding-block: 0.5rem;
+	padding-inline: 1rem;
+	background-color: wheat;
+	border: solid 1px black;
+	border-radius: 4px;
+	font-weight: 700;
+	font-size: 0.6rem;
+	transition: all 0.25s ease-in-out;
+}
+
+.clearButton:hover {
+	background-color: rgb(243, 182, 69);
+	cursor: pointer;
+}
+
+.sourceSelector {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: rgb(56, 56, 56);
+	color: white;
+	border-radius: 5px;
+	padding-block: 1rem;
+	font-size: 0.7rem;
+	width: 9rem;
+	gap: 1rem;
+	margin-right: 2rem;
+}
+
+#id-type-select {
+	border: none;
+	background-color: #ffffff;
+	padding: 0.2rem;
+	width: 4rem;
+	border-radius: 3px;
+	font-size: 0.7rem;
+}
+
+
+.createBreed-button {
+	padding-inline: 1rem;
+	padding-block: 0.4rem;
+	font-size: 1rem;
+	border-radius: 5px;
+	background-color: rgb(199, 29, 29);
+	transition: all 0.2s ease-in-out;
+	font-weight: 600;
+}
+
+.createBreed-button:hover {
+	background-color: rgb(224, 141, 45);
+	cursor: pointer;
+}
+
+
+  
+  
+
+  

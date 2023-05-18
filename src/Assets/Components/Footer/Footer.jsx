@@ -1,4 +1,7 @@
 import "./Footer.modules.css"
+import facebook from "../../Assets/SocialMediaIcons/facebook.png"
+import twitter from "../../Assets/SocialMediaIcons/twitter.png"
+import instagram from "../../Assets/SocialMediaIcons/instagram.png"
 import github from "../../Assets/SocialMediaIcons/github.png"
 import linkedin from "../../Assets/SocialMediaIcons/linkedin.png"
 

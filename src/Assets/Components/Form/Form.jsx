@@ -226,14 +226,17 @@ export default function Form() {
         if (validate()) {
           postBreed(breed)
             .then((response) => {
-              console.log(response)
-              if (response.name && response.name === "AxiosError") {
-                if (response.response.data.error.name === "SequelizeUniqueConstraintError") {
+              if (response instanceof axios.AxiosError) {
+                if (response.code === "ERR_NETWORK") {
+                  setStatusColor("red")
+                  setStatus("Servers are not available, try again later")
+                }
+                if (response.response.data.error === "llave duplicada viola restricción de unicidad «Dogs_name_key»") {
                   setStatusColor("red")
                   setStatus(`There is already a breed called "${breed.name}" in the DB`)
                 }
               } else {
-                if (response.status === 200) {
+                if (response.statusText === "OK" && response.status === 200) {
                   setStatusColor("green")
                   setStatus("Breed created successfully!")
                   clearForm();

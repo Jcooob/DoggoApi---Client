@@ -1,7 +1,7 @@
 .container {
-    width: 430px;
-    height: 650px;
-    border-radius: 20px;
+    width: 15rem;
+    height: 21.4rem;
+    border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.68);
     border: none;
     display: block;
@@ -11,23 +11,22 @@
 
 .breedPicture {
     object-fit: cover;
-    width: 430px; 
-    height: 400px;
+    width: 15rem; 
+    height: 11rem;
     transition: all 0.2s ease-in-out;
   }
 
 .data {
-  font-size: 19px;
+  font-size: 0.65rem;
   background-color: #af9a72;
   color: rgb(0, 0, 0);
-  max-width: 450px;
-  min-height: 135px;
+  max-width: 15rem;
+  min-height: 7rem;
+  height: 2rem;
   margin-top: -6px;
   justify-content: center;
   padding-top: 10px;
-  padding-bottom: 50px;
-  padding-inline: 50px;
-  max-height: 127px;
+  padding-inline: 2rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   font-weight: 700;
@@ -35,18 +34,17 @@
 }
 
 .titleBreed{
+  display: flex;
+  align-items: center;
   justify-content: center;
-  display: block;
   text-align: center;
-  height: 40px;
+  height: 2.5rem;
   color: rgb(255, 255, 255);
-  font-size: 23px;
+  font-size: 1rem;
   background-color: #2e1c0c;
-  margin-top: 0px;
   margin-bottom: 0px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  padding-top: 10px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
   padding-bottom: 7px;
   font-weight: bolder;
   transition: all 0.2s ease-in-out

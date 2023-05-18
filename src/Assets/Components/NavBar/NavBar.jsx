@@ -116,15 +116,15 @@ export default function NavBar() {
               )}
 
               <div className="filterMode">
-              <label className="and-label">
-                <input
-                  type="radio"
-                  value="and"
-                  checked={filterMode === "and"}
-                  onChange={handleFilterModeChange}
-                />
-                  AND
-              </label>
+                <label className="and-label">
+                  <input
+                    type="radio"
+                    value="and"
+                    checked={filterMode === "and"}
+                    onChange={handleFilterModeChange}
+                  />
+                    AND
+                </label>
 
               <label className="or-label">
                 <input

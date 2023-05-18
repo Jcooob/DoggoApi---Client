@@ -1,9 +1,8 @@
 footer {
     background-color: #000000;
-    border-top: 10px solid #dbc18a;
-    padding: 20px 0;
+    border-top: 0.5rem solid #dbc18a;
     color: #f8f8f8;
-    height: 300px
+    height: 16rem
   }
   
   .footer-wrapper {
@@ -11,13 +10,11 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
   }
   
   .developer-info {
-    font-size: 24px;
-    margin-block: 30px;
+    font-size: 1rem;
+    margin-block: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,20 +29,13 @@ footer {
   .social-icons a {
     display: inline-block;
     color: #999;
-    margin-right: 10px;
     font-size: 16px;
-  }
-  
-  .about-link {
-    font-size: 24px;
-    margin-top: 20px;
   }
   
   .about-link a {
     display: inline-block;
     color: #999;
-    margin-right: 10px;
-    font-size: 24px;
+    font-size: 1rem;
     text-decoration: none;
     transition: all 0.3s ease;
   }
@@ -55,7 +45,7 @@ footer {
   }
 
   .socialMediaIcon {
-    max-width: 40px;
+    max-width: 1.7rem;
   }
 
   .socialMediaIcon:hover {
