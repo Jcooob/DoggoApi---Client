@@ -226,8 +226,8 @@ export default function Form() {
         if (validate()) {
           postBreed(breed)
             .then((response) => {
-              if (response instanceof axios.AxiosError) {
-                if (response.code === "ERR_NETWORK") {
+              if (response.name && response.name === "AxiosError") {
+                if (response.response.data.error.name === "SequelizeUniqueConstraintError") {
                   setStatusColor("red")
                   setStatus("Servers are not available, try again later")
                 }
@@ -236,7 +236,7 @@ export default function Form() {
                   setStatus(`There is already a breed called "${breed.name}" in the DB`)
                 }
               } else {
-                if (response.statusText === "OK" && response.status === 200) {
+                if (response.status === 200) {
                   setStatusColor("green")
                   setStatus("Breed created successfully!")
                   clearForm();
