@@ -73,7 +73,7 @@ const BreedDetail = () => {
                 </div>
 
                 <div className="imageBackground">
-                    <img className="dogImg" src={breed.image.url} alt={breed.name} />
+                    <img className="dogImg" src={breed.image ? breed.image.url : `https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`} alt={breed.name} />
                 </div>
                 
                     
