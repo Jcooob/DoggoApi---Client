@@ -11,7 +11,7 @@ const Breeds = ({ breeds }) => {
               key={breed.id}
               id={breed.id}
               name={breed.name}
-              img={breed.image.url}
+              img={breed.image ? breed.image.url : `https://cdn2.thedogapi.com/images/${breed.reference_image_id}.jpg`}
               temperament={breed.temperament}
               weight={breed.weight}
               life_span={breed.life_span}
